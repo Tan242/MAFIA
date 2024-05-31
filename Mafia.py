@@ -17,7 +17,7 @@ subprocess.run(["git", "clone", repo_url])
 os.chdir(dir_name)
 
 # Change permissions of the MAFIA file
-subprocess.run(["chmod", "777", "MAFIA"])
+subprocess.run(["chmod", "777", "Mafia"])
 
 # Execute the MAFIA file
-subprocess.run(["./MAFIA"])
+subprocess.run(["./Mafia"])
