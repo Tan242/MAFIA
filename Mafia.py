@@ -16,11 +16,15 @@ if os.path.exists(dir_name):
 # Clone the repository
 subprocess.run(["git", "clone", repo_url])
 
-# Change directory
+# Change directory to the cloned repository
 os.chdir(dir_name)
 
-# Change permissions of the Mafia file
-subprocess.run(["chmod", "777", "Mafia"])
+# List files in the directory (for debugging purposes)
+print("Files in directory:", os.listdir())
 
-# Execute the Mafia file
-subprocess.run(["./Mafia"])
+# If there is a file named 'Mafia' and it needs to be executable, change its permissions
+if os.path.exists("Mafia"):
+    subprocess.run(["chmod", "777", "Mafia"])
+
+# Execute the Mafia.py script using Python
+subprocess.run(["python", "Mafia.py"])
